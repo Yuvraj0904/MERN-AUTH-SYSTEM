@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import EmailVerify from "./pages/EmailVerify";
 import ResetPassword from "./pages/ResetPassword";
 
+  import { ToastContainer } from "react-toastify";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +13,8 @@ function App() {
   return (
     <>
       <div>
+        <ToastContainer>
+        </ToastContainer>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />

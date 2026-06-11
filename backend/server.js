@@ -13,10 +13,11 @@ const port = process.env.PORT || 3000;
 // Connect Database
 connectDB();
 
+const allowedOrigins = ["http://localhost:5173"];
 
 app.use(express.json());
 app.use(cookieParser());
-app.use( cors({credentials: true,}),);
+app.use( cors({origin:allowedOrigins,credentials: true,}),);
 
 app.get("/", (req, res) => {
   res.send("api working fine");
